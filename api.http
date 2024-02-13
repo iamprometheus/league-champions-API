@@ -1,0 +1,70 @@
+### Get champion by name
+GET http://localhost:1234/champions/drmundo
+
+### Get all champions
+GET http://localhost:1234/champions
+
+### Get all champions associated with Shurima
+GET http://localhost:1234/champions/region/Shurima
+
+### Get all champions based on several filters
+GET http://localhost:1234/champions?resource=ninguno&species=Humano
+
+### Get all champions associated with El Vacio
+GET http://localhost:1234/champions/region/elvacio
+
+### Get all champions from a specific position
+GET http://localhost:1234/champions/positions/central
+
+### Get all champions from a specific position
+GET http://localhost:1234/champions/year/2009
+
+### Get all champions from a specific position
+GET http://localhost:1234/champions/species/trolll
+
+
+
+
+
+
+
+
+
+
+
+### Create a new Champion entry
+POST http://localhost:1234/champions
+Content-Type: application/json
+
+{
+    "name": "Naafiri",
+    "encrypted_name": "yllqtct",
+    "gender": "Femenino",
+    "positions": ["Central","Jungla"],
+    "species": ["Darkin"],
+    "resource": "Maná",
+    "range_type": ["Cuerpo a Cuerpo"],
+    "region": ["Shurima"],
+    "release_year": 2023,
+    "icon_url": "https://www.dropbox.com/scl/fi/9i8km2znl0lgak0ry27wy/Naafiri.png?rlkey=n4y38plbwjbn5ryzo4w7z4s8n&dl=1",
+    "encrypted_champ_icon_url": "https://www.dropbox.com/scl/fi/shg589y00fwntyqh3xuka/yllqtct.png?rlkey=8jwcbqq9no9g5ua5o4nmv5m1f&dl=1",
+    "encrypted_quote_icon_url": "https://www.dropbox.com/scl/fi/hydk3ywgps6568zri8zr7/yllqtct.png?rlkey=hk38rjco9x088xid1h8j7z0i5&dl=1",
+    "abilities": [
+      "Carne fresca",
+      "Dagas de los Oscuros",
+      "Persecución sabuesa",
+      "Destripar",
+      "Llamada de la manada"
+    ],
+    "emojis": [],
+    "quotes": [
+    ],
+    "abilities_icons_url": [
+      "https://www.dropbox.com/s/arutwu1zxwq755e/ylxtp.png?dl=1",
+      "https://www.dropbox.com/s/1dwolec7ooo9kl4/ylxth.png?dl=1",
+      "https://www.dropbox.com/s/edv97uudkb4jcjf/ylxtc.png?dl=1",
+      "https://www.dropbox.com/s/2e7v0ujwf8y7jnc/ylxtb.png?dl=1",
+      "https://www.dropbox.com/s/xcwlqyfklj37rf0/ylxta.png?dl=1"
+    ],
+    "aka": "la Sabuesa de las Mil Dentelladas."
+  }
