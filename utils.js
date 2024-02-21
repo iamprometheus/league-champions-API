@@ -11,6 +11,13 @@ export const compareStrings = (s1, s2) => {
   return s1 === s2
 }
 
+export const normalizeString = (s) => {
+  if (typeof s !== typeof string) return s
+  s = s.toLowerCase()
+  s = s.replaceAll(' ', '').replaceAll('.', '').replaceAll('\'', '')
+  return s
+}
+
 function deAccenter (str) {
   let r = str.toLowerCase()
   r = r.replace(/[àáâãäå]/g, 'a')
@@ -19,4 +26,8 @@ function deAccenter (str) {
   r = r.replace(/[òóôõö]/g, 'o')
   r = r.replace(/[ùúûü]/g, 'u')
   return r
+}
+
+export function isNumeric (n) {
+  return !isNaN(parseFloat(n)) && isFinite(n)
 }

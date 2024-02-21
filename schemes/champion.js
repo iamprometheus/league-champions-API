@@ -5,6 +5,10 @@ const champScheme = z.object({
     invalid_type_error: 'Champion name must be a string',
     required_error: 'Champion name is required'
   }),
+  encrypted_name: z.string({
+    invalid_type_error: 'Champion encrypted name must be a string',
+    required_error: 'Champion encrypted name is required'
+  }),
   gender: z.string(
     z.enum(['Masculino', 'Femenino', 'Otro']),
     {
@@ -25,7 +29,7 @@ const champScheme = z.object({
     required_error: 'Champion resource is required'
   }),
   range_type: z.array(
-    z.enum(['Cuerpo a Cuerpo', 'De Rango'])
+    z.enum(['Cuerpo A Cuerpo', 'De Rango'])
   ),
   region: z.array(z.string()),
   release_year: z.number().int().min(2009),

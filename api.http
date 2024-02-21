@@ -1,70 +1,70 @@
 ### Get champion by name
-GET http://localhost:1234/champions/drmundo
+GET http://localhost:1234/champions/renata
 
 ### Get all champions
 GET http://localhost:1234/champions
 
 ### Get all champions associated with Shurima
-GET http://localhost:1234/champions/region/Shurima
+GET http://localhost:1234/champions/region/bandle
 
 ### Get all champions based on several filters
-GET http://localhost:1234/champions?resource=ninguno&species=Humano
+GET http://localhost:1234/champions?resource=mana&regions=freljord
 
 ### Get all champions associated with El Vacio
-GET http://localhost:1234/champions/region/elvacio
+GET http://localhost:1234/champions/region/Vacío
 
 ### Get all champions from a specific position
-GET http://localhost:1234/champions/positions/central
+GET http://localhost:1234/champions/position/central
 
 ### Get all champions from a specific position
-GET http://localhost:1234/champions/year/2009
+GET http://localhost:1234/champions/year/2022
 
 ### Get all champions from a specific position
-GET http://localhost:1234/champions/species/trolll
-
-
-
-
-
-
-
-
-
-
+GET http://localhost:1234/champions/specie/Ser Del Vacio
 
 ### Create a new Champion entry
 POST http://localhost:1234/champions
 Content-Type: application/json
 
 {
-    "name": "Naafiri",
-    "encrypted_name": "yllqtct",
-    "gender": "Femenino",
-    "positions": ["Central","Jungla"],
+    "name": "Aatrox",
+    "encrypted_name": "lleczi",
+    "gender": "Masculino",
+    "positions": ["Superior"],
     "species": ["Darkin"],
-    "resource": "Maná",
-    "range_type": ["Cuerpo a Cuerpo"],
-    "region": ["Shurima"],
-    "release_year": 2023,
-    "icon_url": "https://www.dropbox.com/scl/fi/9i8km2znl0lgak0ry27wy/Naafiri.png?rlkey=n4y38plbwjbn5ryzo4w7z4s8n&dl=1",
-    "encrypted_champ_icon_url": "https://www.dropbox.com/scl/fi/shg589y00fwntyqh3xuka/yllqtct.png?rlkey=8jwcbqq9no9g5ua5o4nmv5m1f&dl=1",
-    "encrypted_quote_icon_url": "https://www.dropbox.com/scl/fi/hydk3ywgps6568zri8zr7/yllqtct.png?rlkey=hk38rjco9x088xid1h8j7z0i5&dl=1",
+    "resource": "Ninguno",
+    "range_type": ["Cuerpo A Cuerpo"],
+    "region": ["Runeterra", "Shurima"],
+    "release_year": 2013,
+    "icon_url": "https://www.dropbox.com/s/mx655n4pgezeq5k/Aatrox.png?dl=1",
+    "encrypted_champ_icon_url": "https://www.dropbox.com/s/epcfr8cf4a0s6jo/lleczi.png?dl=1",
+    "encrypted_quote_icon_url": "https://www.dropbox.com/s/i1vf17fznctl8y7/lleczi.png?dl=1",
     "abilities": [
-      "Carne fresca",
-      "Dagas de los Oscuros",
-      "Persecución sabuesa",
-      "Destripar",
-      "Llamada de la manada"
+      "Heraldo de la Destrucción",
+      "La Espada Darkin",
+      "Cadenas Infernales",
+      "Impulso Siniestro",
+      "Destructor de Mundos"
     ],
-    "emojis": [],
+    "emojis": [
+      ":cloud_lightning:",
+      ":man_scientist_tone1:",
+      ":robot:",
+      ":mechanical_arm:"
+    ],
     "quotes": [
+      "La guerra saca a relucir nuestro verdadero ser.",
+      "Sé lo que se esconde en el corazón de los hombres.",
+      "Que el miedo se vuelva furia.",
+      "El dolor es temporal, la victoria es eterna.",
+      "Tryndamere... Mi mayor creación."
     ],
     "abilities_icons_url": [
-      "https://www.dropbox.com/s/arutwu1zxwq755e/ylxtp.png?dl=1",
-      "https://www.dropbox.com/s/1dwolec7ooo9kl4/ylxth.png?dl=1",
-      "https://www.dropbox.com/s/edv97uudkb4jcjf/ylxtc.png?dl=1",
-      "https://www.dropbox.com/s/2e7v0ujwf8y7jnc/ylxtb.png?dl=1",
-      "https://www.dropbox.com/s/xcwlqyfklj37rf0/ylxta.png?dl=1"
+      "https://www.dropbox.com/s/0kffg2gbe8frdul/lleczia.png?dl=1",
+      "https://www.dropbox.com/s/iw5kp2ttjdnu9ua/lleczib.png?dl=1",
+      "https://www.dropbox.com/s/7giyfxqfcnm21hn/lleczic.png?dl=1",
+      "https://www.dropbox.com/s/o3eqj9ubiim9z3e/lleczih.png?dl=1",
+      "https://www.dropbox.com/s/38a54ximxv6hm45/lleczip.png?dl=1"
     ],
-    "aka": "la Sabuesa de las Mil Dentelladas."
+    "aka": "La Espada Darkin."
   }
