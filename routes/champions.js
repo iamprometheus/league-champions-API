@@ -7,7 +7,7 @@ championsRouter.get('/', ChampionController.getAll)
 championsRouter.post('/', ChampionController.create)
 
 championsRouter.get('/:name', ChampionController.getByName)
-championsRouter.patch('/:name', ChampionController.update)
+championsRouter.patch('/:id', ChampionController.update)
 championsRouter.delete('/:id', ChampionController.delete)
 
 championsRouter.get('/region/:region', ChampionController.getByRegion)

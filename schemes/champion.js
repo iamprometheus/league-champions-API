@@ -61,3 +61,7 @@ const champScheme = z.object({
 export const validateChampion = (object) => {
   return champScheme.safeParse(object)
 }
+
+export const validatePartialChampion = (object) => {
+  return champScheme.partial().safeParse(object)
+}

@@ -34,7 +34,7 @@ Content-Type: application/json
     "species": ["Darkin"],
     "resource": "Ninguno",
     "range_type": ["Cuerpo A Cuerpo"],
-    "region": ["Runeterra", "Shurima"],
+    "regions": ["Runeterra", "Shurima"],
     "release_year": 2013,
     "icon_url": "https://www.dropbox.com/s/mx655n4pgezeq5k/Aatrox.png?dl=1",
     "encrypted_champ_icon_url": "https://www.dropbox.com/s/epcfr8cf4a0s6jo/lleczi.png?dl=1",
@@ -68,3 +68,16 @@ Content-Type: application/json
     ],
     "aka": "La Espada Darkin."
   }
+
+### Delete a champion
+DELETE http://localhost:1234/champions/65d572019d7961d0ca1ef7b5
+
+### Update fields for champion
+PATCH http://localhost:1234/champions/65d572019d7961d0ca1ef7b5
+Content-Type: application/json
+
+{
+  "name": "Aatrox",
+  "range_type": ["Cuerpo A Cuerpo"],
+  "regions": ["Runeterra", "Shurima"]
+}

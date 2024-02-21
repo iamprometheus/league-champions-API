@@ -1,5 +1,5 @@
 import { ChampionModel } from '../models/mongodb/champion.js'
-import { validateChampion } from '../schemes/champion.js'
+import { validateChampion, validatePartialChampion } from '../schemes/champion.js'
 
 export class ChampionController {
   static async getAll (req, res) {
@@ -58,7 +58,14 @@ export class ChampionController {
   }
 
   static async update (req, res) {
-    // const result = ChampionModel.getByName('Name')
+    const result = validatePartialChampion(req.body)
+    if (!result.success) {
+      return res.status(400).json({ error: JSON.parse(result.error.message) })
+    }
+    const { id } = req.params
+    const updatedChampion = await ChampionModel.updateChampion({ id, input: result.data })
+    if (!updatedChampion) return res.status(404).json({ message: 'Couldn\'t find champion with provided id.' })
+    res.json(updatedChampion)
   }
 
   static async delete (req, res) {

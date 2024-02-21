@@ -155,7 +155,7 @@ export class ChampionModel {
   static async createChampion (data) {
     // verify if champion already exists
     const champion = await championRecords.findOne({ name: data.name })
-    if (champion !== undefined) return false
+    if (champion !== null) return false
     try {
       // create a document to insert
       const doc = {
@@ -186,12 +186,23 @@ export class ChampionModel {
   }
 
   static async deleteChampion (id) {
-    const objectId = ObjectId(id)
+    const objectId = new ObjectId(id)
     try {
-      const result = MongoClient.findOneAndDelete({ _id: objectId })
+      const result = championRecords.deleteOne({ _id: objectId })
       return result
     } catch (error) {
       console.error(error)
+    }
+  }
+
+  static async updateChampion ({ id, input }) {
+    const objectId = new ObjectId(id)
+    try {
+      const result = await championRecords.findOneAndUpdate({ _id: objectId }, { $set: input }, { returnNewDocument: true })
+      if (result === null) return false
+      return result
+    } catch (e) {
+      console.log(e)
     }
   }
 }
